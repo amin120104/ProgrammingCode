@@ -1,0 +1,87 @@
+1. Code for Odd/Even
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, n;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.println("Enter how many number you want to check for odd/even\n");
+        n = valueinput.nextInt();
+
+        for(i=1; i<=n; i++) {
+            if (i%2 == 0) {
+                System.out.printf("%d is an even number\n", i);
+            }
+            else {
+                System.out.printf("%d is an odd number\n", i);
+            }
+
+        }
+    }
+}
+
+2. Check prime number
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, n, flag = 0;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.println("Enter a number to check prime or not?\n");
+        n = valueinput.nextInt();
+
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                flag++;
+                break;
+            }
+        }
+
+        if (flag == 0) {
+            System.out.printf("%d is a prime number", n);
+        } else {
+            System.out.printf("%d is not a prime number", n);
+        }
+    }
+}
+
+3. Check n to m range number prime or not.
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, number, count = 0;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter how many number you want to check prime or not: ");
+        number = valueinput.nextInt();
+
+        for (i = 3; i <= number; i++) {
+            for (int j=2; j<i; j++) {
+                if(i%j == 0) {
+                    count++;
+                    break;
+                }
+            }
+
+            if ( count == 0) {
+                    System.out.printf("%d is a prime number.\n", i);
+                }
+            count = 0;
+        }
+
+    }
+}
+
+4. 
