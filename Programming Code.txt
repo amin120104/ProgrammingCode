@@ -212,4 +212,88 @@ class Test {
     }
 }
 
-9. 
+9. Another way to calculate of sum digits
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int remainder, temp, number,  sum = 0;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter a number to sum of digits: ");
+        int value = valueinput.nextInt();
+
+        temp = value;
+
+        while(temp != 0) {
+            remainder = temp % 10;
+            sum += remainder;
+            temp = temp / 10;
+        }
+        
+        System.out.printf("The sum of digit is: %d", sum);
+    }
+}
+
+10. Pattern show
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, j, n;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter how many row of pattern you want to show: ");
+        n = valueinput.nextInt();
+
+        for (i = 0; i<=n; i++) {
+            for (j = 0; j<=i; j++) {
+                System.out.printf("%d ", j);
+            }
+
+            System.out.println("\n");
+        }
+    }
+}
+
+11. Show Max Min value
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, max, n = 0;
+        int[] arrayValue = new int[5];
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter 5 value to show max: \n");
+
+        for (i = 0; i<5; i++) {
+            arrayValue[i] = valueinput.nextInt();
+        }
+
+        max = arrayValue[0];
+
+        for (int j = 1; j < 5; j++) {
+            
+            // for minimum just here will be ">" symbol 
+                if (max < arrayValue[j]) {
+                    max = arrayValue[j];
+                }
+        }
+
+        System.out.println("Maximum = " +max );
+
+        
+    }
+}
+
+12. 
