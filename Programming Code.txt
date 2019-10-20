@@ -84,4 +84,132 @@ class Test {
     }
 }
 
-4. 
+4. Factorial number
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, number, count = 0,  sum = 1;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter your factorial number: ");
+        number = valueinput.nextInt();
+
+        for (i = 1; i <= number; i++) {
+            
+            sum = sum * i;
+        }
+
+        System.out.printf("factorial value is: %d", sum);
+
+    }
+}
+
+5. Fibonacci Serious
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int fib1 = 0 , fib2 = 1, fib3, number, sum = 0;
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter the fibonacci number range: ");
+        number = valueinput.nextInt();
+
+        System.out.printf("Fibonacci is: %d %d", fib1, fib2);
+
+        for (int i = 3; i <= number; i++) { //here i=3 coz already two are frinted.
+             
+            fib3 = fib1 + fib2;
+            System.out.printf(" %d", fib3);
+            fib1 = fib2;
+            fib2 = fib3;
+        }
+
+
+    }
+}
+
+6. Reverse String
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i;
+        String reverse = "";
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter a string to reverse: ");
+        String str = valueinput.nextLine();
+
+        for(i = str.length() - 1; i>=0; i--) {
+            reverse += str.charAt(i);
+        }
+        
+        System.out.printf("reverse string is: %s", reverse);
+    }
+}
+
+7. Palindrom check
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i;
+        String reverse = "";
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter a string to check palindrom or not?: ");
+        String str = valueinput.nextLine();
+
+        for(i = str.length() - 1; i>=0; i--) {
+            reverse += str.charAt(i);
+        }
+        
+        if (str.equals(reverse)) {
+            System.out.printf("palindrom!");
+        } else {
+            System.out.println("not palindrom");
+
+        }
+    }
+}
+
+8. Sum of digits
+
+import java.util.*;
+
+class Test {
+    public static void main(String[] args) {
+
+        // variable declare
+        int i, number,  sum = 0;
+        String reverse = "";
+
+        Scanner valueinput = new Scanner(System.in);
+        System.out.printf("Enter a number to sum of digits: ");
+        String str = valueinput.nextLine();
+
+        String arrayValue[] = str.split("");
+
+        for(String a : arrayValue) {
+            number = Integer.parseInt(a);
+            sum += number;
+        }
+        System.out.printf("Sum of digits is: %d", sum);
+    }
+}
+
+9. 
