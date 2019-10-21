@@ -238,7 +238,9 @@ class Test {
     }
 }
 
-10. Pattern show
+10. Pattern show   1
+		   1	2
+		   1	2	3   as like as this	 	
 
 import java.util.*;
 
@@ -270,30 +272,157 @@ class Test {
     public static void main(String[] args) {
 
         // variable declare
-        int i, max, n = 0;
+        int i, max, min, n = 0;
         int[] arrayValue = new int[5];
 
         Scanner valueinput = new Scanner(System.in);
-        System.out.printf("Enter 5 value to show max: \n");
+        System.out.printf("Enter 5 value to show maximum and minimum: \n");
 
         for (i = 0; i<5; i++) {
             arrayValue[i] = valueinput.nextInt();
         }
 
         max = arrayValue[0];
+        min = arrayValue[0];
 
         for (int j = 1; j < 5; j++) {
             
-            // for minimum just here will be ">" symbol 
                 if (max < arrayValue[j]) {
                     max = arrayValue[j];
                 }
+
+                if (min > arrayValue[j]) {
+                    min = arrayValue[j];
+                }
         }
 
-        System.out.println("Maximum = " +max );
+        System.out.println("Maximum = " +max);
+        System.out.println("Minimum = " +min);
 
         
     }
 }
 
-12. 
+12. Add to number without using arithomatic operator
+
+import java.util.*;
+
+class Test {
+
+    static int Add(int x, int y) {
+        while(y != 0) {
+            int carry = x & y;
+
+            x = x ^ y;
+
+            y = carry << 1;
+        }
+        return x;
+    }
+    public static void main(String[] args) {
+
+        // variable declare
+        int x, y;
+        System.out.println(Add(67, 32));
+        
+    }
+}
+
+13. Sum of Matrix A and Matrix B
+
+import java.util.*;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        // variable declare
+        int[][] firstAry = new int[2][3];        
+        int[][] secondAry = new int[2][3];
+
+
+        
+        Scanner valueInput = new Scanner(System.in);
+        
+        // Scanner for first array value
+        System.out.println("Enter first array value: ");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                firstAry[i][j] = valueInput.nextInt();
+            }
+        }
+
+        // Scanner for second array value  
+        System.out.println("Enter second array value: ");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                secondAry[i][j] = valueInput.nextInt();
+            }
+        }
+
+        // first array value show
+        System.out.println("First array value is: ");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("%d ", firstAry[i][j]);
+            }
+            System.out.println();
+        }
+
+         // Second array value show
+        System.out.println("Second array value is: ");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("%d ", secondAry[i][j]);
+            }
+            System.out.println();
+        }
+
+
+         // Add both array value
+        System.out.println("Sum of Matrix1 and Matrix2 value is: ");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf("%d ", firstAry[i][j] + secondAry[i][j]);
+            }
+            System.out.println();
+        }
+
+
+        
+    }
+}
+
+14. 0
+    1 2
+    3 4 5
+    6 7 8 9  show this pattern.
+
+import java.util.*;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        // variable declare
+        int k = 0;
+        int[][] firstAry = new int[4][4];
+        
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j <= i; j++) {
+                firstAry[i][j] = k;
+                k++;
+            }
+        }
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("%d ", firstAry[i][j]);
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+15. 
