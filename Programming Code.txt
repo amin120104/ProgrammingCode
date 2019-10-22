@@ -425,4 +425,93 @@ class Test {
     }
 }
 
-15. 
+15. Arrylist Declare, add(), size(), for loop with special one, Intration use system, hasNext(), next(), remove(), removeAll() function test
+*sourse: Java Bangla Tutorials 63 - anisul islam
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        // arraylist declare
+        ArrayList<Integer> number = new ArrayList<>();
+
+        //add value in arraylist
+        number.add(10);
+        number.add(30);
+        System.out.println(number);  //output [10,30]
+
+        //show length/size of arraylist
+        System.out.println(number.size());  //output 2
+
+        //show value using for loop
+        for(int a : number) {
+            System.out.println(a);  //output 10  30
+        }
+
+        //show value using iterator method
+        Iterator value = number.iterator();
+
+        while(value.hasNext()) {
+            System.out.println(value.next());  //output 10 30
+        }
+
+        //remove value from arraylist
+        number.remove(1);
+        System.out.println(number);  //output [10]
+
+        //removeall value from arraylist
+        number.removeAll(number);
+        System.out.println(number);  //output []
+        
+    }
+}
+
+16. isEmpty(), contains(), indexOf(), set(), get() and clear() function practice added
+*sourse: Java Bangla Tutorials 63 - anisul islam
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        // arraylist declare
+        ArrayList<Integer> number = new ArrayList<>();
+
+        //add value in arraylist
+        number.add(10);
+        number.add(30);
+
+        //check arraylist empty or not
+        boolean check = number.isEmpty();
+        System.out.println(check);  //output true
+
+        //contains method to check same value have in arraylist or not
+        boolean checkValue = number.contains(30);
+        System.out.println(checkValue);  //output false
+
+        //indexof function to show index of a value
+        int indexofvalue = number.indexOf(30);
+        System.out.println(indexofvalue);  //output 1 but now it show -1  **Note: to show this value off number.clear();
+
+        //set function **actually it is work as replacer. so 1 index replace with 45 value.
+        number.set(1, 45);
+        System.out.println(number);  //output [10,45]
+
+        //get function using index to get value
+        int getvalue = number.get(1);
+        System.out.println(getvalue);  //output 45
+
+
+        //value remove with clear()
+        number.clear();
+        System.out.println(number);  //output []
+        
+    }
+}
+
+17. 
