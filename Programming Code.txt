@@ -469,11 +469,12 @@ class Test {
     }
 }
 
-16. isEmpty(), contains(), indexOf(), set(), get() and clear() function practice added
-*sourse: Java Bangla Tutorials 63 - anisul islam
+16. isEmpty(), contains(), indexOf(), set(), get(), Collections.sort() and clear() function practice added
+*sourse: Java Bangla Tutorials 64 - anisul islam
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Collections;
 
 class Test {
 
@@ -506,6 +507,10 @@ class Test {
         int getvalue = number.get(1);
         System.out.println(getvalue);  //output 45
 
+        //SORT
+        Collections.sort(number);
+        System.out.println(number);
+
 
         //value remove with clear()
         number.clear();
@@ -514,4 +519,197 @@ class Test {
     }
 }
 
-17. 
+17. Pattern:         
+	*
+       * *
+      * * *
+     * * * *
+    * * * * *
+   * * * * * *
+  * * * * * * *
+ * * * * * * * *   show this type of pattern.
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Collections;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        for (int i = 1; i < 10; i++) {
+
+             for (int j = 1; j <= 10-i ; j++) {
+                System.out.printf(" ");
+            }
+            for (int j = 1; j < i; j++) {
+                System.out.printf("* ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+18. max and second max value
+
+import java.util.*;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        int[] result = new int[5];
+
+        Scanner value = new Scanner(System.in);
+        
+        for (int i = 0; i < 5; i++) {
+            result[i] = value.nextInt();
+        }
+
+        int max, second;
+
+        max = second = result[0];
+
+        for (int i = 1; i < 5; i++) {
+            if(max < result[i]) {
+                second = max;
+                max = result[i];
+            }
+            if (result[i] > second && result[i] != max) {
+                second = result[i];
+            }
+            
+        }
+        
+        System.out.println("Max:"+max);
+        System.out.println("Second:"+second);
+
+        
+    }
+}
+
+19. Sort with bubble sort algorithm
+
+import java.util.*;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        int[] result = {-3, 4, 7, -2, 6};
+        int temp;
+
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result.length-1; j++) {
+
+                if (result[j] > result[j+1]) {
+                    temp = result[j];
+                    result[j] = result[j+1];
+                    result[j+1] = temp;
+                }
+            }
+        }
+        
+        for (int a : result) {
+            System.out.println(a);  //output -3, -2, 4, 6, 7
+        }
+        
+    }
+}
+
+20. Fibonaci number using recursive way
+
+import java.util.*;
+
+class Test {
+
+    static void fibonaci(int first1, int second1, int value) {
+
+        int sum = 0;
+        if (value != 0) {
+
+            sum = first1 + second1;
+            System.out.printf("%d ", sum);
+            fibonaci(first1 = second1, second1 = sum, value - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        System.out.printf("0 1 ");
+        fibonaci(0, 1, 5);
+
+    }
+}
+
+21. String, StringBuffer and StringBuilder
+
+import java.util.*;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        // String (Strign variable value (example ss or s) is not changeable ).
+        String ss = "Bangla";   // this and below both are same
+        String s = new String("Bangla");
+        // s.append("Desh");  // We cannot change or add character in String
+        System.out.println(ss);
+        System.out.println(s);
+
+        if(ss == s) {
+            System.out.println("Equals");
+        } else {
+            System.out.println("Not Equals");
+        }
+        // output : Not Equals
+        // coz: here == operator check both are same object or not. we see that first is ss object and last is new s object.
+        // So both are not same.
+
+        if(ss.equals(s)) {
+            System.out.println("Equals");
+        } else {
+            System.out.println("Not Equals");
+        }
+        // output: Equlas.
+        // Coz: here ss.equals(s) just check value not object. so both are same here.
+
+        
+        //String Buffer
+        StringBuffer sb = new StringBuffer("Bangla");
+        sb.append("desh");
+        System.out.println(sb);  //Output: Bangladesh
+
+        sb.reverse();
+        System.out.println(sb);  //Output: hsedalgnaB
+
+        // sb.delete(start, end);
+        sb.delete(6, 10);
+        System.out.println(sb);  //Output: hsedal
+
+        sb.setLength(3);
+        System.out.println(sb);  //Output: hse
+
+
+
+        //String Builder (same as string buffer just less secure)
+        StringBuilder sbu = new StringBuilder("BanglaDesh");
+        sbu.append(" desh");
+        System.out.println(sbu);  //Output: Bangladesh desh
+
+        sbu.reverse();
+        System.out.println(sbu);  //Output: hsed hsedalgnaB
+
+        // sbu.delete(start, end);
+        sbu.delete(6, 10);
+        System.out.println(sbu);  //Output: hsed hlgnaB
+
+        sbu.setLength(3);
+        System.out.println(sbu);  //Output: hse
+
+    }
+}
+
+22. 
