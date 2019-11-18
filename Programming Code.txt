@@ -712,4 +712,104 @@ class Test {
     }
 }
 
-22. 
+22. Constructor (2types: parameter and without parameter)
+*Source - 83, 84, 85 no video from anisul islam java tutorial
+
+import java.util.*;
+
+class Test {
+
+    int max, min;
+    String message;
+
+    // constructor declare1
+    Test( int i, int j, String k ) {
+        max = i;
+        min = j;
+        message = k;
+    }
+
+    // Constructor declare without parameter
+    Test() {
+        System.out.println("empty constructor");
+    }
+
+    void value() {
+        System.out.printf("%d and %d %s\n", max, min, message);
+    }
+
+    public static void main(String[] args) {
+
+        Test obj = new Test(10, 5, "both are positive number");
+        obj.value();  //Output: 10 and 5 both are positive number
+
+        // if parameter is empty then empty constructor will be call
+        Test obj2 = new Test(); // Output: here call empty parameter constructor and print empty constructor 
+
+    }
+}
+
+23. Static variable example
+
+import java.util.*;
+
+class Test {
+
+    // if it is without static then when object is create then new memory will be alocated and all 
+    // output is 1. But if we use static keyword with below then it will be cammon variable or jsut
+    // one time will be memory alocated and output will be 1, 2, 3. 
+    static int count;
+
+    Test() {
+        count++;
+    }
+
+    void testMethod() {
+        System.out.println("value of count is: " +count);
+    }
+
+    public static void main(String[] args) {
+
+        Test value1 = new Test();
+        value1.testMethod();  // output: value of count is: 1
+
+        Test value2 = new Test();
+        value2.testMethod();  // output: value of count is: 1
+
+        Test value3 = new Test();
+        value3.testMethod();  // output: value of count is: 1
+
+    }
+}
+
+24. Static method and variable restirction 
+
+import java.util.*;
+
+class Test {
+
+    //Import note: Always keep it mind that static variable or method only can directly use or call in static place
+    // example here x is not static. so if I try to use it in m2() and main() method then it will be error.
+    // coz method is static but variable not static.
+    // and static method can call in non static method. example m2() is called in m1();
+    // static variable can use both static and non static mehtod. example static x = 5; then we can use it m1 and m2 method.
+
+    int x = 5;
+
+    void m1() {
+        m2();
+        System.out.println(x);
+    }
+
+    static void m2() {
+        System.out.println("hello");
+    }
+    public static void main(String[] args) {
+
+        Test obj = new Test();
+        obj.m1();  //output: hello 5
+
+    }
+}
+
+25. 
