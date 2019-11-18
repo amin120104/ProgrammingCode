@@ -840,5 +840,38 @@ public class Test {
     }
 }
 
-26. 
+26. Instance variable hidding 
+class: 97 (anisul haque -- java bangla)
+
+import java.util.*;
+
+class Box {
+
+    double height, width, depth, x=0;
+
+    // If here variable is also same as instance variable then it will be call by this itsalf
+    // so we need this to solve this. otherwise no need.
+    // exmaple double height; then in block it will be this.height = height;    
+    Box(double h, double w, double d) {
+        height = h;
+        width = w;
+        depth = d;
+       
+    }
+
+    void displayVal() {
+        x = height * width * depth;
+        System.out.println(x);
+    }
+    public static void main(String[] args) {
+        
+        Box obj = new Box(10, 20, 30);
+        obj.displayVal();
+
+        Box obj2 = new Box(10, 45, 30);
+        obj2.displayVal();
+    }
+}
+
+27. 
 class: 00 (anisul haque -- java bangla)
