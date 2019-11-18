@@ -812,4 +812,33 @@ class Test {
     }
 }
 
-25. 
+25. Static block and static variable value set using this
+class: 93 (anisul haque -- java bangla)
+
+import java.util.*;
+
+public class Test {
+
+    static int number;
+    static String name;
+
+    // Initialize value of static variable in static block 
+    static {
+        number = 123;
+        name = "amin mithun";
+    }
+
+    void m1() {
+        System.out.println("value :" +number);
+        System.out.println("name :" +name);
+    }
+
+    public static void main(String[] args) {
+        
+        Test obj = new Test();
+        obj.m1();
+    }
+}
+
+26. 
+class: 00 (anisul haque -- java bangla)
