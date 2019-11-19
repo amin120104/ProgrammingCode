@@ -873,5 +873,53 @@ class Box {
     }
 }
 
-27. 
-class: 00 (anisul haque -- java bangla)
+27. Call by Value
+class: 101 (anisul haque -- java bangla)
+
+import java.util.*;
+
+class Test {
+
+    void fn(int data) {
+        data = 20;
+        System.out.println("data: " +data);
+    }
+
+    public static void main(String[] args) {
+        
+        int x = 10;
+        Test obj = new Test();
+        obj.fn(x);  // here we pass a value in method but main value (x) is not change. It is called call by value
+
+        System.out.println("x is: " +x);  // Output: x is 10
+
+    }   
+}
+
+28. Call by Referance
+class: 101 (anisul haque -- java bangla)
+
+import java.util.*;
+
+class Test {
+
+    static int x;
+
+    void fn(Test obj2) {
+        obj2.x = 20;
+        System.out.println("data: " +x); //output data: 20
+    }
+
+    public static void main(String[] args) {
+        
+        Test obj = new Test();
+        obj.x = 10;
+        obj.fn(obj);  // here we pass a obj referance value in method and now main value (x) is changed. It is called call by referance
+
+        System.out.println("x is: " +x);  // Output: x is 20
+
+    }   
+}
+
+28. Call by Referance
+class: 101 (anisul haque -- java bangla)
