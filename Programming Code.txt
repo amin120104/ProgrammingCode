@@ -1011,7 +1011,8 @@ public class Test2 extends Test {
 30. Method override
 class: 115 (anisul haque -- java bangla)
 Note: In methdo override - return type, method name and method parameter must be same.
-
+Note of note: If we use final and static access modifier before a method then we can't override it.
+ 
 import java.util.*;
 
 class Animal {
