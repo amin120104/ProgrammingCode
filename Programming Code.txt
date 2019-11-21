@@ -1007,3 +1007,40 @@ public class Test2 extends Test {
 
     }   
 }
+
+30. Method override
+class: 115 (anisul haque -- java bangla)
+Note: In methdo override - return type, method name and method parameter must be same.
+
+import java.util.*;
+
+class Animal {
+    
+    void common(String name) {
+        System.out.println("I am parrent " +name);
+    }
+
+}
+
+class Dog extends Animal{
+
+    void common(String name) {
+        System.out.println("I am " +name);
+    }
+
+}
+
+public class Test {
+    
+    public static void main(String[] args) {
+
+        Dog obj2 = new Dog();
+        obj2.common("cat");
+    }
+
+}
+
+31. Method override
+class: 115 (anisul haque -- java bangla)
+
+ 
