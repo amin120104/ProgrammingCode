@@ -924,6 +924,7 @@ class Test {
 28. Getter setter
 class: 108 (anisul haque -- java bangla)
 
+First class:
 import java.util.*;
 
 public class Test {
@@ -949,7 +950,7 @@ public class Test {
 
 }
 
-
+Second class:
 import java.util.*;
 
 public class Test2 {
@@ -965,6 +966,44 @@ public class Test2 {
         // get value
         System.out.println("Id is: " +obj.getId());
         System.out.println("Name is: " +obj.getName());
+
+    }   
+}
+
+29. Example of inheretance and instanceof (instanceof check a class in a object or not)
+class: 111-112 (anisul haque -- java bangla)
+
+First class:
+import java.util.*;
+
+public class Test {
+    
+    protected int id;
+    int tk;
+
+}
+
+Second class:
+import java.util.*;
+
+public class Test2 extends Test {
+
+    String name = "amin";
+
+    void m1() {
+        System.out.printf("id: %d, name: %s, balance: %d\n", id, name, tk);  // Output: id: 123, name: amin, balance: 9999
+    }
+
+    public static void main(String[] args) {
+
+        Test2 obj = new Test2();
+
+        obj.id = 123;
+        obj.tk = 9999;
+
+        obj.m1();
+
+        System.out.println(obj instanceof Test2);  //Output: true
 
     }   
 }
