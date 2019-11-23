@@ -1041,7 +1041,38 @@ public class Test {
 
 }
 
-31. Method override
-class: 115 (anisul haque -- java bangla)
+31. Use of super() method.
+class: 120 (anisul haque -- java bangla)
 
- 
+import java.util.*;
+
+class Animal {
+
+    Animal(int an) {
+        int animalnumber = an;
+        System.out.println("Animal class & animal= " +animalnumber);  //Output: Animal class & animal=10
+    }
+
+}
+
+class Dog extends Animal{
+
+    Dog(int animalvalue) {
+        super(animalvalue);
+        System.out.println("Dog class");  //Output: Dog class
+    }
+
+}
+
+public class Test {
+    
+    public static void main(String[] args) {
+
+        Dog obj2 = new Dog(10);
+    }
+
+}
+
+32. Use of super() method.
+class: 120 (anisul haque -- java bangla)
+
