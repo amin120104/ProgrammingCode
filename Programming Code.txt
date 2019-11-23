@@ -1041,7 +1041,7 @@ public class Test {
 
 }
 
-31. Use of super() method.
+31. Use of super() method. // Parrent class er kono kichu call korar jonne super() use hoi.
 class: 120 (anisul haque -- java bangla)
 
 import java.util.*;
@@ -1073,6 +1073,40 @@ public class Test {
 
 }
 
-32. Use of super() method.
-class: 120 (anisul haque -- java bangla)
+32. Use of this() method. // Class er moddhei kono akta common variable or constructor pauyar jonne this() use hoi.
+class: 122 (anisul haque -- java bangla)
+
+import java.util.*;
+
+public class Test {
+
+    String fname;
+    String lname;
+    int age;
+
+    Test(String fname, String lname) {
+        this.fname = fname;
+        this.lname = lname;
+    }
+
+    Test(String fname, String lname, int age) {
+        this(fname, lname);
+        this.age = age;
+    }
+
+    void displayMethod() {
+        System.out.printf("I am %s %s and my age is %d", fname, lname, age);
+    }
+    
+    public static void main(String[] args) {
+
+        Test obj = new Test("amin", "ali", 26);
+        obj.displayMethod();
+    }
+
+}
+
+33. 
+class: 122 (anisul haque -- java bangla)
+
 
