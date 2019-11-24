@@ -1074,7 +1074,7 @@ public class Test {
 }
 
 32. Use of this() method. // Class er moddhei kono akta common variable or constructor pauyar jonne this() use hoi.
-class: 122 (anisul haque -- java bangla)
+class: 121 (anisul haque -- java bangla)
 
 import java.util.*;
 
