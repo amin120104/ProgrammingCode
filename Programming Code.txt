@@ -1232,5 +1232,36 @@ class Test {
 }
 
 
-36. Interface
-class: 131 (anisul haque -- java bangla)
+36. Example of multiple inheretance using interface
+class: 132 (anisul haque -- java bangla)
+
+import java.util.*;
+
+interface Test1 {
+    
+    void m1();
+
+}
+interface Test2 {
+
+    void m1();
+
+}
+
+class Test3 implements Test1, Test2 {
+    
+    public void m1() {
+        System.out.println("hello multiple inheretance by interface");
+    }
+
+}
+
+class Test {
+    public static void main(String[] args) {
+        Test3 obj = new Test3();
+        obj.m1();
+    }
+}
+
+37. 
+class: 133 (anisul haque -- java bangla)
