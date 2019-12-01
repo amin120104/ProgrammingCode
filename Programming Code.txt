@@ -1181,7 +1181,56 @@ class Hello {
 }
 
 
-35. 
-class: 130 (anisul haque -- java bangla)
+35. Interface
+class: 131 (anisul haque -- java bangla)
+
+// Interface (100% abstraction) 
+// Note: interface as like as php traits.
+// An interface is a collection of abstract methods.
+
+// Some important point of Interface:
+// 1. For fully abstraction.
+// 2. It support multiple inheritance.
+// 3. When we make a method in interface class then compiler automatically add public and abstract keyword.
+//
+// Example: interface Test {
+//    void m1(); 
+// }
+// Then compiler automatic compile it to: public abstract void m1();
+// 
+// 4. Also in interface class variable, compiler add public static final keyword automatically.
+// Example : int a = 10;   ----compile it to----    public static final int a = 10; 
+//
+// 5. Class extends other class, same as interface extends interface but when we call it from
+// class then use implements keyword but need to use all abstract method.
+// 6. Can't create object of interface class.
 
 
+
+import java.util.*;
+
+interface Test1 {
+    
+    public void m1();
+
+}
+
+class Test2 implements Test1 {
+
+    public void m1() {
+        System.out.println("hello this is abstract class");
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+
+        Test2 obj = new Test2();
+        obj.m1();
+    }
+
+}
+
+
+36. Interface
+class: 131 (anisul haque -- java bangla)
