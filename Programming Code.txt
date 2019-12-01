@@ -1106,7 +1106,82 @@ public class Test {
 
 }
 
-33. 
-class: 122 (anisul haque -- java bangla)
+33. Use of final variable and value initialization process
+class: 123 (anisul haque -- java bangla)
+
+import java.util.*;
+
+public class Test {
+
+    // final variable show all uppercare & all final variable and method we cannot override or can't change value;
+    final int NUMBER = 1000;  // variable declare & value set.
+
+    final String NAME;   // This is called blank final variable and we can set this variable value just using constructor.
+
+    static final String  FULLNAME; // static final variable value can set just using static block.
+
+    // Blank final variable Value set using constructor
+    Test() {
+        NAME = "amin";
+    }
+
+    // static final variable value set
+    static {
+        FULLNAME = "amin mithun";
+    }
+
+    void displayMethod() {
+        System.out.printf("I am %s. My full name %s and now my id is %d", NAME, FULLNAME, NUMBER);
+    }
+    
+    public static void main(String[] args) {
+
+        Test obj = new Test();
+        obj.displayMethod();
+    }
+
+}
+
+34. Abstraction
+class: 128-129 (anisul haque -- java bangla)
+
+// Abstruction:
+// Abstruction is the process of hiding the implementation details and showing only the functionality to the user.
+// Real life example: money withdrow from atm booth.
+
+// Some important point of abstract method:
+// 1. Abstract method has no body.
+// 2. It must be ends with a semicolon.
+// 3. It must be in the abstract class.
+// 4. It must be overridden.
+// 5. It can never be final and static.
+// Example : abstract void message();
+
+import java.util.*;
+
+abstract class Test {
+    
+    public abstract void m1();
+
+}
+
+class Test2 extends Test {
+
+    public void m1() {
+        System.out.println("hello this is abstract class");
+    }
+}
+
+class Hello {
+    public static void main(String[] args) {
+
+        Test2 obj = new Test2();
+        obj.m1();
+    }
+}
+
+
+35. 
+class: 130 (anisul haque -- java bangla)
 
 
