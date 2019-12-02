@@ -1341,5 +1341,52 @@ public class Main {
 }
 
 
-39. 
-class: 142 (anisul haque -- java bangla)
+39. HashMap
+class: 148 (anisul haque -- java bangla)
+
+// Note: HashMap work with put and get method. and first ta index id and last ta value
+
+import java.util.HashMap;
+
+public class Main {
+
+    public static void main(String []args){
+         
+        HashMap<Integer,String> country = new HashMap<Integer,String> ();
+        
+        country.put(101, "Bd");
+        country.put(102, "japan");
+        country.put(103, "india");
+        
+        System.out.println(country.get(101));
+    
+    }
+}
+
+40. HashSet
+class: 149 (anisul haque -- java bangla)
+
+// Note: HashSet work with add method. Main Difference between hashmap and hasset is: hasset can't work with duplicate value.
+
+import java.util.HashSet;
+
+public class Main {
+
+    public static void main(String []args){
+         
+        HashSet<String> country = new HashSet<String> ();
+        
+        country.add("Bd");
+        country.add("Bd");
+        country.add("japan");
+        country.add("japan");
+        country.add("india");
+        
+        System.out.println(country);  // Output: [Bd, japan, india] jodio output: [Bd,Bd,japan,japan,india] hobar kotha silo but 
+                                      // it is now work on duplicate value;
+    
+    }
+}
+
+41. 
+class: 150 (anisul haque -- java bangla)
