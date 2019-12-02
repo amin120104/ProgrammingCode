@@ -1263,5 +1263,42 @@ class Test {
     }
 }
 
-37. 
-class: 133 (anisul haque -- java bangla)
+37. Exception handling
+class: 141 (anisul haque -- java bangla)
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String []args){
+         
+        int flag = 1;
+        
+        do{
+        
+            try {
+                
+                
+                System.out.print("Enter two input: ");
+                Scanner input1 = new Scanner(System.in);
+                int x = input1.nextInt();
+                
+                Scanner input2 = new Scanner(System.in);
+                int y = input2.nextInt();
+                
+                int result = x / y;
+                
+                System.out.println("result is: "+result);
+                flag =2;
+                
+                } catch(Exception e) {
+                    
+                    System.out.println("Your code have a Exception" +e);
+                } 
+         } while(flag == 1);
+    
+    }
+}
+
+38. Exception handling
+class: 141 (anisul haque -- java bangla)
