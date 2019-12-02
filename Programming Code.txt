@@ -1300,5 +1300,20 @@ public class Main {
     }
 }
 
-38. Exception handling
+38. Code for how many digit show after point example 3.99;
 class: 141 (anisul haque -- java bangla)
+
+import java.text.DecimalFormat;
+
+public class Main {
+
+    public static void main(String []args){
+         
+        double x = 3.384737372;
+        
+        DecimalFormat obj = new DecimalFormat("0.00");
+        
+        System.out.println("value is: " +obj.format(x));
+    
+    }
+}
