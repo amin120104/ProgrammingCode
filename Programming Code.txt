@@ -1301,7 +1301,7 @@ public class Main {
 }
 
 38. Code for how many digit show after point example 3.99;
-class: 141 (anisul haque -- java bangla)
+class: 142 (anisul haque -- java bangla)
 
 import java.text.DecimalFormat;
 
@@ -1317,3 +1317,29 @@ public class Main {
     
     }
 }
+
+39. Linked list
+class: 142 (anisul haque -- java bangla)
+
+// Note: LinkedList and ArrrayList both are same in coding sector
+
+import java.util.LinkedList;
+
+public class Main {
+
+    public static void main(String []args){
+         
+        LinkedList<String> country = new LinkedList<String> ();
+        
+        country.add("Bd");
+        country.add("japan");
+        country.add("india");
+        
+        System.out.println(country);
+    
+    }
+}
+
+
+39. 
+class: 142 (anisul haque -- java bangla)
