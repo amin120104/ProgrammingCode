@@ -110,6 +110,34 @@ class Test {
 
 5. Fibonacci Serious
 
+recursive way in c (best)
+#include <stdio.h>
+
+int fib(int n) {
+    if(n == 1 || n == 2) {
+        return 1;
+    } else {
+        return fib(n-1) + fib(n-2);
+    }
+}
+
+int main() {
+    int fab1 = 0, fab2 = 1, x, i;
+    
+    scanf("%d", &x);
+    
+    for(i = 1; i <= x; i++) {
+        printf("%d ", fib(i));
+    }
+    
+    return 0;
+}
+
+Input: 8
+Output: 1 1 2 3 5 8 13 21 
+
+
+Without recursion
 import java.util.*;
 
 class Test {
