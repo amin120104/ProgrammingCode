@@ -211,6 +211,34 @@ class Test {
 
 7. Palindrom check
 
+**palindrom number check in c
+
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0 ,temp, r;
+    
+    scanf("%d", &num);
+    
+    temp = num;
+    
+    while(temp != 0) {
+        r = temp % 10;
+        sum = sum * 10 + r;
+        temp = temp/10;
+    }
+    
+    if(num == sum) {
+        printf("number is palindrom");
+    } else {
+        printf("number is not palindrome");
+    }
+    
+    return 0;
+}
+
+
+//palindrom string check in java
 import java.util.*;
 
 class Test {
